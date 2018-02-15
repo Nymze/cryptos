@@ -1,0 +1,29 @@
+
+<h1> Discover today's value of <%= @crypto %> </h1>
+
+<p> Today's price is <%= @cryptos[@crypto] %>
+
+<!--   cdn. aframe . io/-->
+
+<a-scene>
+
+	<a-assets>
+
+	<%= @cryptos[@crypto] %>
+	<%= @crypto %>
+
+	https://ucarecdn.com/031254ad-f96d-4bca-bf69-aefbb7acb7e3/
+
+
+	</a-assets>
+
+	 <a-sky src="https://ucarecdn.com/a223006d-49c1-4eda-b598-0b9881bd9007/"></a-sky>
+
+	<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+	<!-- <a-plane rotation="-90 0 0" width="30" height="30"></a-plane> -->
+
+	<a-entity position="0.206 1.905 -0.926" scale="2.020 3.060 1.700" color="#ff1d00" text="value: today <%= @crypto %> is at <%= @cryptos[@crypto] %> "></a-entity>
+
+<a-entity camera="userHeight: 1.6" look-controls></a-entity>
+
+</a-scene>

@@ -1,29 +1,35 @@
 
-<h1> Discover today's value of <%= @crypto %> </h1>
+<head>
+<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
 
-<p> Today's price is <%= @cryptos[@crypto] %>
-
+</head>
 <!--   cdn. aframe . io/-->
-
 <a-scene>
-
 	<a-assets>
 
 	<%= @cryptos[@crypto] %>
 	<%= @crypto %>
 
-	https://ucarecdn.com/031254ad-f96d-4bca-bf69-aefbb7acb7e3/
-
+	
+	<img id="bitconnect" src="https://ucarecdn.com/e60b088d-26ae-4cce-9c1a-27451a9a4ddc/">
 
 	</a-assets>
 
-	 <a-sky src="https://ucarecdn.com/a223006d-49c1-4eda-b598-0b9881bd9007/"></a-sky>
+	
 
-	<!--<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-	<a-plane rotation="-90 0 0" width="30" height="30"></a-plane> -->
+	<a-image src="https://ucarecdn.com/e60b088d-26ae-4cce-9c1a-27451a9a4ddc/  " position ="0.330 1.640 -0.959" rotation = "0 0 0" scale ="2.910 1.546 1.196" ></a-image>
 
-	<a-entity position="0.206 1.905 -0.926" scale="2.020 3.060 1.700" color="#ff1d00" text="value: today <%= @crypto %> is at <%= @cryptos[@crypto] %> "></a-entity>
 
-<a-entity camera="userHeight: 1.6" look-controls></a-entity>
+	 <a-sky src="https://ucarecdn.com/bf73cd5a-261f-4582-8055-6c4fbbd1ded1/"></a-sky> 
+
+	 
+	 <a-ocean width="200" depth="200" density="40" opacity="1" position="0 -4 0"></a-ocean>
+
+	<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+	<!-- <a-plane rotation="-90 0 0" width="30" height="30"></a-plane> -->
+
+	<a-entity position="0.206 1.905 -0.926" scale="2.020 3.060 1.700" color="#ff1d00" text="value: Today <%= @crypto %> is at <%= @cryptos[@crypto] %> "></a-entity>
+
+<a-entity camera="userHeight: 1.6" look-controls position="-0.987 1 1.730" rotation="-0.917 -13.06" scale=""> <a-cursor></a-cursor> </a-entity>
 
 </a-scene>

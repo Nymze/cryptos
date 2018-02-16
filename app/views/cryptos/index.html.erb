@@ -1,9 +1,10 @@
 
 
 
-<body>
+<body class ="mainc">
 
-
+<div> 
+<div class = "overlay"> 
 <h1>Here's the crypto list</h1>
 
 <%= form_tag (cryptos_path) do %>
@@ -11,13 +12,41 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 
-  <p> <%= label_tag 'crypto', "Select your crypto"  %> </p>
-  <p> <%= select_tag :crypto, options_for_select(@crypto_names.collect{|x| x})%> 
+  <p> <%= label_tag 'crypto', " "  %> </p>
+  <p> <%= select_tag :crypto, options_for_select(@crypto_names.collect{|x| x}), class: "action"%> 
   </p>
-	<p> <%= submit_tag 'Find the current price!', class: "btn btn-primary"%></p>
+	<p> <%= submit_tag 'Find the current price!', class: "action" %></p>
   </div>
 </div>
 
 <% end %>
+
+</div>
+
+<a-scene class="scene" id="aframe-viewer">
+	<a-assets>
+
+	
+
+
+	</a-assets>
+
+	 <a-sky src="https://ucarecdn.com/bf73cd5a-261f-4582-8055-6c4fbbd1ded1/"></a-sky> 
+
+	 
+	 <a-ocean width="200" depth="200" density="40" opacity="1" position="0 -4 0"></a-ocean>
+
+	<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+	<!-- <a-plane rotation="-90 0 0" width="30" height="30"></a-plane> -->
+
+	<a-entity position="0.206 1.905 -0.926" scale="2.020 3.060 1.700" color="#ff1d00" text="value: "></a-entity>
+
+<a-entity camera="userHeight: 1.6" look-controls> <a-cursor></a-cursor> </a-entity>
+
+</a-scene>
+
+
+</div>
+
 
 </body>
